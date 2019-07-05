@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+		<script src="index.js"></script>
+		<script>
+			$(document).ready(function(){
+				init();
+				status("welcome","#0f3")
+			});
+		</script>
+	</head>
+	<body>
+		<p class="status"></p>
+		<div class="page">
+			<select name="protocol">
+				<option value=""></option>
+				<option selected value="http://">http</option>
+				<option value="https://">https</option>
+				<option value="file://">file</option>
+				<option value="ftp://">ftp</option>
+			</select>
+			<input name="domain" value="52.58.48.97:26657/">
+			<input name="path"  value="genesis">
+			<input name="params" value="" >
+			<iframe> </iframe>
+		</div>
+	</body>
+<style>
+	html , body , div.page, * {margin :0; padding: 0;}
+	span {padding:3px 25px; margin-right: 25px;}
+	p.status {background-color: #676161;text-align: center;paddin:3px 0 ; font-size:16px;}
+	div.page { background-color: #ccc;height: 250px;overflow: hidden; resize: vertical;  padding-right:3px;min-height:60px;}
+	iframe {border:0;width: calc(100% - 3px); height:calc(100% - 22px);}
+	select {position:left;top:0; width: 10%;  }
+	input {position:relative;top:0; width: 29%;  }
+</style>
+</html>
